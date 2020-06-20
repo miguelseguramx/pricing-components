@@ -1,0 +1,35 @@
+.wrapper {
+  padding: 60px 20px 40px;
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  background-image: url(../../images/bg-top.svg);
+  background-repeat: no-repeat;
+  background-size: 375px 658px;
+  background-position: 50vw -10vw;
+
+  @media screen and (min-width: 900px){
+    padding: 70px 20px 40px;
+    background-image: url(../../images/bg-top.svg), url(../../images/bg-bottom.svg);
+    background-repeat: no-repeat, no-repeat;
+    background-size: 375px 658px, 353px 304px;
+    background-position: right top, left bottom;
+  }
+}
+
+.main{
+  h1{
+    color: $Blue;
+    margin: 0px 0 40px;
+    text-align: center;
+  }
+  max-width: 1050px;
+  margin: 0 auto;
+}
+
+.cards{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}

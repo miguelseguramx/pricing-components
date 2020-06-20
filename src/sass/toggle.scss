@@ -1,0 +1,67 @@
+.pricing{
+  width: 100%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 70px;
+
+  span{
+    display: block;
+    color: $LightBlue;
+    font-size: 0.9em;
+  }
+  @media screen and (min-width: 900px){
+    margin-bottom: 65px;
+  }
+}
+
+.toggle-check{
+  display: none;
+
+  &:checked ~ .cards .card p{
+    &:first-of-type {
+      display: block;
+    }
+
+    &:nth-of-type(2){
+      display: none;
+    }
+  }
+
+  &:checked ~ .pricing .toggle-button{
+    &::before{
+      right: 5px;
+      left: initial;
+    }
+  }
+}
+
+.toggle-button{
+  margin: 0 22px;
+  display: block;
+  width: 55px;
+  height: 33px;
+  background-image: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+  background-color: $LightBlue;
+  border-radius: 40px;
+  position: relative;
+  cursor: pointer;
+
+  &::before{
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    display: block;
+    content: "";
+    background-color: white;
+    top: 4px;
+    left: 5px;
+    border-radius: 50%;
+    transition: all .5s ease-in;
+  }
+
+  &:active{
+    background-image: none;
+  }
+}
+
